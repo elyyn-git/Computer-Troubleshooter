@@ -1,9 +1,11 @@
-Masalah
-1	Komputer tidak menyala	
-2	Internet tidak tersambung	
-3	Aplikasi tidak bisa dibuka	
-4	Speaker tidak berfungsi	
-5	File tidak bisa dibuka	
-6	Komputer mudah panas	
-7	Komputer lambat	
-8	Keyboard sulit digunakan
+ID,Kode_Kategori,Nama_Kategori
+1,CT001,Komputer Tidak Menyala
+2,CT002,Aplikasi Tidak Bisa Dibuka
+3,CT003,Speaker Tidak Berfungsi
+4,CT004,File Tidak Bisa Dibuka
+5,CT005,Komputer Mudah Panas
+6,CT006,Keyboard Tidak Berfungsi
+7,CT007,Internet Tidak Bisa Terhubung
+8,CT008,Komputer Berjalan Lambat
+9,CT009,Layar Komputer Bermasalah
+10,CT010,Batrai Laptop Cepat Habis
