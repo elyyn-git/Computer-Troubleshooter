@@ -1,0 +1,10 @@
+# File hasil kompilasi
+*.exe
+*.obj
+*.pdb
+
+# File sementara Visual Studio
+.vs/
+
+# Folder build
+build/
