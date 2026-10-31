@@ -1,9 +1,9 @@
-ID_Hasil,Kode_Kategori,Penyebab,Solusi
+﻿ID_Hasil,Kode_Kategori,Penyebab,Solusi
 R001A,CT001,Kabel daya atau charger tidak terpasang dengan benar,Sambungkan kabel daya atau charger dengan rapat. Pastikan konektor tidak longgar dan gunakan adaptor yang sesuai dengan perangkat.
 R001B,CT001,Kemungkinan sumber listrik atau stopkontak bermasalah,"Coba stopkontak lain yang berfungsi. Jika menggunakan terminal listrik, periksa saklarnya dan hindari terminal yang rusak."
-R001C,CT001,"Kemungkinan terdapat masalah pada tombol power, adaptor, atau komponen daya","Matikan dan lepaskan charger bila aman dilakukan. Periksa kondisi adaptor dan konektor dari luar. Jika tetap tidak menyala, minta bantuan teknisi."
+R001C,CT001,"Daya tampaknya masuk karena indikator menyala, tetapi komputer tetap tidak menyala dengan normal","Pastikan layar tidak hanya dalam keadaan mati atau sleep. Lepaskan perangkat USB tambahan, lalu coba nyalakan kembali. Jika tetap gagal masuk ke sistem, minta bantuan teknisi untuk memeriksa tombol power dan komponen internal."
 R001D,CT001,Penyebab belum dapat dipastikan dari pemeriksaan dasar,"Pastikan baterai/charger memiliki daya dan lepaskan perangkat USB tambahan. Jika komputer tetap tidak menyala, lakukan pemeriksaan teknisi."
-R002A,CT002,Kemungkinan file aplikasi atau komponen pendukungnya bermasalah,"Catat pesan error yang muncul. Tutup aplikasi, restart komputer, lalu coba fitur Repair jika tersedia."
+R002A,CT002,Gangguan aplikasi mungkin terjadi tanpa pesan error yang jelas,"Catat pesan error yang muncul. Tutup aplikasi, restart komputer, lalu coba fitur Repair jika tersedia."
 R002B,CT002,Kemungkinan aplikasi mengalami crash atau tidak kompatibel,"Periksa persyaratan sistem aplikasi. Tutup proses aplikasi melalui Task Manager, lalu coba jalankan kembali."
 R002C,CT002,Kemungkinan aplikasi atau sistem belum menggunakan versi terbaru,"Periksa pembaruan resmi aplikasi dan Windows. Pasang pembaruan yang sesuai, kemudian restart komputer."
 R002D,CT002,Penyebab belum dapat dipastikan dari pemeriksaan dasar,"Coba jalankan aplikasi lain untuk memastikan masalah hanya terjadi pada satu aplikasi. Jika tetap gagal, hubungi dukungan aplikasi atau teknisi."
@@ -11,10 +11,10 @@ R003A,CT003,Volume komputer atau aplikasi sedang mute,"Klik ikon speaker, matika
 R003B,CT003,Koneksi speaker atau headset kemungkinan longgar atau salah port,"Lepaskan lalu sambungkan kembali konektor. Untuk perangkat Bluetooth, pastikan perangkat sudah dipasangkan dan terhubung."
 R003C,CT003,Perangkat output audio atau driver mungkin bermasalah,"Buka Settings > System > Sound dan pilih perangkat output yang benar. Jika tidak terdeteksi, periksa driver audio melalui Device Manager."
 R003D,CT003,"Kemungkinan masalah berasal dari speaker, kabel, atau pengaturan audio lain","Coba speaker/headset pada perangkat lain dan coba perangkat audio lain pada komputer. Jika speaker tetap tidak berfungsi, periksa ke teknisi."
-R004A,CT004,File mungkin tidak didukung atau memiliki asosiasi aplikasi yang salah,Periksa ekstensi file dan pilih aplikasi yang sesuai melalui Open with. Jangan mengubah ekstensi file secara sembarangan.
+R004A,CT004,Format file mungkin tidak didukung atau aplikasi default pada komputer ini tidak sesuai,Periksa ekstensi file dan pilih aplikasi yang sesuai melalui Open with. Jangan mengubah ekstensi file secara sembarangan.
 R004B,CT004,Aplikasi pembuka file belum terpasang atau tidak sesuai,"Pasang aplikasi tepercaya yang mendukung format file tersebut, lalu coba buka kembali."
 R004C,CT004,File mungkin rusak atau proses pengunduhan/penyalinan belum selesai,"Unduh atau salin ulang file dari sumber tepercaya. Jika ada salinan cadangan, coba gunakan salinan tersebut."
-R004D,CT004,Penyebab belum dapat dipastikan dari pemeriksaan dasar,Coba buka file dengan aplikasi lain yang mendukung formatnya. Pastikan file berasal dari sumber tepercaya dan lakukan pemindaian keamanan bila perlu.
+R004D,CT004,"File dapat dibuka di perangkat lain, sehingga masalah kemungkinan berada pada komputer atau aplikasi di perangkat ini","Pastikan aplikasi yang digunakan mendukung format file, lalu periksa pengaturan Open with dan coba perbarui atau perbaiki aplikasi. Jika masih gagal, minta bantuan teknisi atau dukungan aplikasi."
 R005A,CT005,Aliran udara kemungkinan terhambat,Letakkan komputer di permukaan keras dan datar. Beri ruang di sekitar ventilasi agar udara dapat mengalir.
 R005B,CT005,Beban kerja tinggi kemungkinan meningkatkan suhu perangkat,Tutup aplikasi yang tidak diperlukan dan beri jeda setelah pekerjaan berat. Hindari meletakkan laptop di atas permukaan yang menutup ventilasi.
 R005C,CT005,Kipas mungkin tidak bekerja optimal atau ventilasi berdebu,"Periksa ventilasi dari luar dan bersihkan debu permukaan dengan hati-hati saat perangkat mati. Jika kipas tidak berfungsi, minta bantuan teknisi."
@@ -33,7 +33,7 @@ R008C,CT008,Program startup atau proses latar belakang mungkin membebani kompute
 R008D,CT008,Penyebab belum dapat dipastikan dari pemeriksaan dasar,"Periksa penggunaan CPU, RAM, dan disk melalui Task Manager. Pastikan sistem dan aplikasi diperbarui dari sumber resmi."
 R009A,CT009,Koneksi kabel layar atau monitor kemungkinan longgar,"Matikan monitor, periksa konektor, lalu pasang kembali dengan benar. Pastikan sumber input monitor sesuai."
 R009B,CT009,"Kemungkinan masalah pada driver display, pengaturan, atau panel layar","Restart komputer dan periksa pembaruan driver display melalui sumber resmi. Jika tampilan tetap bermasalah, minta pemeriksaan teknisi."
-R009C,CT009,Kemungkinan pengaturan output atau koneksi monitor eksternal bermasalah,"Buka Display Settings, pilih Detect, dan pastikan mode tampilan yang sesuai. Periksa kabel dan port yang digunakan."
+R009C,CT009,Kemungkinan masalah terbatas pada layar internal atau koneksi layar internal,"Jika monitor eksternal menampilkan gambar dengan normal, kemungkinan masalah berada pada panel layar laptop atau kabel layar internal. Hindari membongkar perangkat sendiri; minta bantuan teknisi untuk memeriksanya."
 R009D,CT009,Penyebab belum dapat dipastikan dari pemeriksaan dasar,"Coba monitor atau kabel lain yang diketahui berfungsi. Jika layar internal tetap bermasalah, lakukan pemeriksaan teknisi."
 R010A,CT010,Aplikasi latar belakang kemungkinan menggunakan banyak daya,Tutup aplikasi yang tidak digunakan dan periksa penggunaan daya melalui pengaturan Battery.
 R010B,CT010,Kecerahan layar yang tinggi dapat meningkatkan penggunaan daya,Kurangi kecerahan ke tingkat yang nyaman dan aktifkan Battery Saver jika diperlukan.

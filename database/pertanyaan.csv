@@ -1,31 +1,31 @@
-ID_Pertanyaan,Kode_Kategori,Pertanyaan,Jika_Y,Jika_T
+﻿ID_Pertanyaan,Kode_Kategori,Pertanyaan,Jika_Y,Jika_T
 Q00101,CT001,Apakah kabel daya atau charger sudah terpasang dengan benar?,Q00102,R001A
-Q00102,CT001,Apakah stopkontak berfungsi saat digunakan dengan perangkat lain?,R001B,Q00103
+Q00102,CT001,Apakah stopkontak berfungsi saat digunakan dengan perangkat lain?,Q00103,R001B
 Q00103,CT001,Apakah lampu indikator komputer atau laptop menyala saat tombol power ditekan?,R001C,R001D
 Q00201,CT002,Apakah muncul pesan error saat aplikasi dibuka?,Q00202,R002A
 Q00202,CT002,Apakah aplikasi langsung tertutup atau berhenti merespons setelah dibuka?,R002B,Q00203
-Q00203,CT002,Apakah aplikasi dan sistem operasi sudah diperbarui?,R002C,R002D
-Q00301,CT003,Apakah volume komputer atau aplikasi sedang dalam keadaan mute?,Q00302,R003A
-Q00302,CT003,Apakah speaker atau headset terhubung dengan benar?,R003B,Q00303
+Q00203,CT002,Apakah aplikasi atau sistem operasi belum diperbarui ke versi terbaru?,R002C,R002D
+Q00301,CT003,Apakah volume komputer atau aplikasi sedang dalam keadaan mute?,R003A,Q00302
+Q00302,CT003,Apakah speaker atau headset terhubung dengan benar?,Q00303,R003B
 Q00303,CT003,Apakah speaker atau headset yang digunakan terdeteksi di pengaturan Sound?,R003C,R003D
 Q00401,CT004,Apakah muncul pesan error ketika file dibuka?,Q00402,R004A
-Q00402,CT004,Apakah aplikasi yang sesuai dengan format file sudah terpasang?,R004B,Q00403
-Q00403,CT004,Apakah ukuran file terlihat normal dan file dapat dibuka di perangkat lain?,R004C,R004D
-Q00501,CT005,Apakah ventilasi udara komputer tertutup atau terhalang?,Q00502,R005A
+Q00402,CT004,Apakah aplikasi yang sesuai dengan format file sudah terpasang?,Q00403,R004B
+Q00403,CT004,Apakah file dapat dibuka dengan normal di perangkat lain?,R004D,R004C
+Q00501,CT005,Apakah ventilasi udara komputer tertutup atau terhalang?,R005A,Q00502
 Q00502,CT005,Apakah komputer menjadi panas saat menjalankan aplikasi atau pekerjaan berat?,R005B,Q00503
-Q00503,CT005,Apakah kipas terdengar berputar saat komputer digunakan?,R005C,R005D
+Q00503,CT005,Apakah kipas tidak terdengar berputar saat komputer terasa panas?,R005C,R005D
 Q00601,CT006,Apakah keyboard sudah terhubung dengan benar ke komputer?,Q00602,R006A
 Q00602,CT006,Apakah hanya beberapa tombol tertentu yang tidak merespons?,R006B,Q00603
 Q00603,CT006,Apakah keyboard tetap tidak berfungsi setelah komputer di-restart?,R006C,R006D
 Q00701,CT007,Apakah Wi-Fi pada komputer berhasil terhubung ke jaringan?,Q00702,R007A
-Q00702,CT007,Apakah perangkat lain dapat mengakses internet melalui jaringan yang sama?,R007B,Q00703
+Q00702,CT007,Apakah perangkat lain dapat mengakses internet melalui jaringan yang sama?,Q00703,R007B
 Q00703,CT007,Apakah komputer menampilkan status 'No Internet' meskipun sudah terhubung ke Wi-Fi?,R007C,R007D
-Q00801,CT008,Apakah banyak aplikasi berjalan secara bersamaan?,Q00802,R008A
+Q00801,CT008,Apakah banyak aplikasi berjalan secara bersamaan?,R008A,Q00802
 Q00802,CT008,Apakah ruang penyimpanan pada drive utama hampir penuh?,R008B,Q00803
 Q00803,CT008,Apakah komputer terasa lambat bahkan saat baru dinyalakan?,R008C,R008D
 Q00901,CT009,Apakah kabel monitor atau konektor layar sudah terpasang dengan benar?,Q00902,R009A
 Q00902,CT009,Apakah layar berkedip atau menampilkan garis/tampilan tidak normal?,R009B,Q00903
-Q00903,CT009,Apakah monitor eksternal terdeteksi ketika dihubungkan ke komputer?,R009C,R009D
-Q01001,CT010,Apakah banyak aplikasi berjalan di latar belakang?,Q01002,R010A
+Q00903,CT009,Apakah tampilan pada monitor eksternal normal ketika dihubungkan ke komputer?,R009C,R009D
+Q01001,CT010,Apakah banyak aplikasi berjalan di latar belakang?,R010A,Q01002
 Q01002,CT010,Apakah tingkat kecerahan layar diatur sangat tinggi?,R010B,Q01003
 Q01003,CT010,Apakah baterai cepat berkurang meskipun laptop digunakan untuk aktivitas ringan?,R010C,R010D

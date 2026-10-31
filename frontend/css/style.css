@@ -1,0 +1,746 @@
+
+/* ========================================
+   COMPUTER TROUBLESHOOTER
+   Modern Blue & White Theme
+======================================== */
+
+/* 1. RESET DAN VARIABEL */
+:root {
+    --primary: #2563eb;
+    --primary-dark: #1d4ed8;
+    --primary-light: #eff6ff;
+
+    --success: #16a34a;
+    --success-dark: #15803d;
+
+    --danger: #dc2626;
+    --danger-light: #fef2f2;
+
+    --background: #f5f7fb;
+    --surface: #ffffff;
+    --text: #172033;
+    --muted: #64748b;
+    --border: #e2e8f0;
+
+    --radius: 16px;
+    --shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: var(--background);
+    color: var(--text);
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+/* 2. HEADER */
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+
+    padding: 18px 7%;
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+    box-shadow: 0 2px 10px rgba(15, 23, 42, 0.03);
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.brand-icon {
+    width: 52px;
+    height: 52px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: linear-gradient(135deg, #2563eb, #60a5fa);
+    color: white;
+    border-radius: 15px;
+
+    font-size: 19px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    box-shadow: 0 5px 12px rgba(37, 99, 235, 0.2);
+}
+
+.brand h1 {
+    font-size: 20px;
+    font-weight: 750;
+    line-height: 1.3;
+}
+
+.brand p {
+    font-size: 13px;
+    color: var(--muted);
+}
+
+.user-info {
+    padding: 9px 14px;
+    background: var(--primary-light);
+    color: var(--primary-dark);
+    border-radius: 30px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+/* 3. LAYOUT UTAMA */
+.container {
+    width: min(1120px, 90%);
+    margin: 0 auto;
+    padding: 45px 0 65px;
+}
+
+.page {
+    animation: fadeIn 0.3s ease;
+}
+
+.hidden {
+    display: none !important;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 4. BAGIAN WELCOME */
+.welcome {
+    text-align: center;
+    max-width: 700px;
+    margin: 10px auto 40px;
+}
+
+.eyebrow {
+    display: inline-block;
+    margin-bottom: 10px;
+
+    color: var(--primary);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.welcome h2 {
+    font-size: clamp(28px, 4vw, 42px);
+    line-height: 1.2;
+    margin-bottom: 15px;
+    letter-spacing: -1px;
+}
+
+.welcome p {
+    color: var(--muted);
+    font-size: 16px;
+}
+
+/* 5. CARD LOGIN */
+.login-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 28px;
+    box-shadow: var(--shadow);
+}
+
+.login-grid .card {
+    transition: transform 0.25s ease,
+                box-shadow 0.25s ease;
+}
+
+.login-grid .card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 30px rgba(15, 23, 42, 0.09);
+}
+
+.icon-box {
+    width: 52px;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 20px;
+    border-radius: 14px;
+
+    background: #dbeafe;
+    color: var(--primary);
+    font-size: 23px;
+    font-weight: 800;
+}
+
+.icon-box.green {
+    background: #dcfce7;
+    color: var(--success);
+}
+
+.card h3 {
+    font-size: 19px;
+    margin-bottom: 8px;
+}
+
+.card > p {
+    color: var(--muted);
+    font-size: 14px;
+    margin-bottom: 22px;
+}
+
+/* 6. FORM DAN INPUT */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+label {
+    font-size: 13px;
+    font-weight: 650;
+    margin-top: 7px;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 13px 14px;
+
+    font-family: inherit;
+    font-size: 14px;
+    color: var(--text);
+
+    background: #ffffff;
+    border: 1px solid #cbd5e1;
+    border-radius: 10px;
+    outline: none;
+
+    transition: border-color 0.2s,
+                box-shadow 0.2s;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #94a3b8;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: none;
+}
+
+form button {
+    margin-top: 12px;
+}
+
+/* 7. TOMBOL */
+.btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+
+    padding: 12px 18px;
+    border: 1px solid transparent;
+    border-radius: 10px;
+
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+
+    cursor: pointer;
+    transition: background 0.2s,
+                transform 0.2s,
+                box-shadow 0.2s;
+}
+
+.btn:hover {
+    transform: translateY(-1px);
+}
+
+.btn:active {
+    transform: translateY(0);
+}
+
+.btn:focus-visible {
+    outline: 3px solid #93c5fd;
+    outline-offset: 3px;
+}
+
+.btn.primary {
+    background: var(--primary);
+    color: white;
+}
+
+.btn.primary:hover {
+    background: var(--primary-dark);
+    box-shadow: 0 5px 14px rgba(37, 99, 235, 0.2);
+}
+
+.btn.success {
+    background: var(--success);
+    color: white;
+}
+
+.btn.success:hover {
+    background: var(--success-dark);
+}
+
+.btn.danger {
+    background: var(--danger);
+    color: white;
+}
+
+.btn.danger:hover {
+    background: #b91c1c;
+}
+
+.btn.outline {
+    background: white;
+    color: var(--text);
+    border-color: var(--border);
+}
+
+.btn.outline:hover {
+    background: #f8fafc;
+    border-color: #94a3b8;
+}
+
+.btn.full {
+    width: 100%;
+}
+
+.hint {
+    color: var(--muted);
+    font-size: 12px;
+    margin-top: 12px;
+}
+
+/* 8. HEADING HALAMAN */
+.page-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 28px;
+}
+
+.page-heading h2 {
+    font-size: clamp(25px, 3vw, 32px);
+    line-height: 1.3;
+    margin-bottom: 8px;
+}
+
+.page-heading p {
+    color: var(--muted);
+    font-size: 14px;
+}
+
+/* 9. DASHBOARD DAN FITUR */
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+    margin-bottom: 28px;
+}
+
+.feature-grid > * {
+    min-width: 0;
+}
+
+.feature-grid .card,
+.feature-card {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 23px;
+    box-shadow: var(--shadow);
+}
+
+/* 10. KATEGORI MASALAH */
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.category-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+
+    min-height: 140px;
+    padding: 20px;
+
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+
+    text-align: left;
+    cursor: pointer;
+
+    transition: transform 0.2s,
+                border-color 0.2s,
+                box-shadow 0.2s;
+}
+
+.category-card:hover {
+    transform: translateY(-3px);
+    border-color: #93c5fd;
+    box-shadow: var(--shadow);
+}
+
+.category-card h3 {
+    font-size: 15px;
+    line-height: 1.4;
+}
+
+.category-card p {
+    color: var(--muted);
+    font-size: 12px;
+}
+
+.category-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 42px;
+    height: 42px;
+
+    background: var(--primary-light);
+    color: var(--primary);
+    border-radius: 12px;
+
+    font-size: 20px;
+}
+
+/* 11. DIAGNOSIS */
+.diagnosis-card {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 35px;
+}
+
+.progress-track {
+    width: 100%;
+    height: 8px;
+    overflow: hidden;
+
+    background: #e2e8f0;
+    border-radius: 20px;
+    margin-bottom: 18px;
+}
+
+.progress-bar {
+    width: 0;
+    height: 100%;
+    background: linear-gradient(90deg, #2563eb, #60a5fa);
+    border-radius: inherit;
+    transition: width 0.3s ease;
+}
+
+.diagnosis-card h3 {
+    font-size: clamp(20px, 3vw, 26px);
+    line-height: 1.5;
+    margin: 20px 0 28px;
+}
+
+.answer-buttons {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+}
+
+.answer-buttons .btn {
+    padding: 15px;
+    font-size: 15px;
+}
+
+/* 12. HASIL DIAGNOSIS */
+#resultContent h3 {
+    font-size: 21px;
+    margin-bottom: 14px;
+}
+
+#resultContent h4 {
+    font-size: 15px;
+    margin: 20px 0 8px;
+}
+
+#resultContent p {
+    color: var(--muted);
+    margin-bottom: 10px;
+}
+
+#resultContent ul,
+#resultContent ol {
+    padding-left: 22px;
+    margin: 10px 0 18px;
+}
+
+#resultContent li {
+    margin-bottom: 8px;
+    padding-left: 4px;
+}
+
+.button-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 22px;
+}
+
+/* 13. TABEL RIWAYAT DAN ADMIN */
+.table-card {
+    overflow-x: auto;
+}
+
+.table-card h3 {
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+    text-align: left;
+}
+
+thead {
+    background: #f1f5f9;
+}
+
+th,
+td {
+    padding: 14px 16px;
+    border-bottom: 1px solid var(--border);
+    vertical-align: top;
+}
+
+th {
+    color: #475569;
+    font-weight: 750;
+    white-space: nowrap;
+}
+
+tbody tr:hover {
+    background: #f8fafc;
+}
+
+td {
+    color: #334155;
+}
+
+/* 14. STATISTIK */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.stat-card {
+    padding: 25px;
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+.stat-card p {
+    color: var(--muted);
+    font-size: 13px;
+}
+
+.stat-card h3 {
+    color: var(--primary);
+    font-size: 30px;
+    margin-top: 8px;
+}
+
+/* 15. FOOTER */
+footer {
+    padding: 25px 20px;
+    text-align: center;
+
+    background: white;
+    border-top: 1px solid var(--border);
+}
+
+footer p {
+    color: var(--muted);
+    font-size: 12px;
+    margin: 4px 0;
+}
+
+/* 16. RESPONSIVE TABLET */
+@media (max-width: 900px) {
+    .container {
+        width: 92%;
+    }
+
+    .category-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .feature-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* 17. RESPONSIVE HP */
+@media (max-width: 600px) {
+    .topbar {
+        padding: 15px 4%;
+        align-items: flex-start;
+    }
+
+    .brand {
+        gap: 10px;
+    }
+
+    .brand-icon {
+        width: 43px;
+        height: 43px;
+        font-size: 16px;
+        border-radius: 12px;
+    }
+
+    .brand h1 {
+        font-size: 16px;
+    }
+
+    .brand p {
+        font-size: 11px;
+    }
+
+    .user-info {
+        font-size: 11px;
+        padding: 7px 10px;
+    }
+
+    .container {
+        width: 92%;
+        padding: 30px 0 45px;
+    }
+
+    .welcome {
+        margin-bottom: 28px;
+    }
+
+    .welcome h2 {
+        font-size: 29px;
+    }
+
+    .welcome p {
+        font-size: 14px;
+    }
+
+    .login-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .card {
+        padding: 22px;
+    }
+
+    .page-heading {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 14px;
+    }
+
+    .page-heading h2 {
+        font-size: 26px;
+    }
+
+    .feature-grid,
+    .category-grid,
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .category-card {
+        min-height: auto;
+    }
+
+    .diagnosis-card {
+        padding: 23px;
+    }
+
+    .diagnosis-card h3 {
+        font-size: 21px;
+    }
+
+    .answer-buttons {
+        grid-template-columns: 1fr;
+    }
+
+    .button-row {
+        flex-direction: column;
+    }
+
+    .button-row .btn {
+        width: 100%;
+    }
+
+    .table-card {
+        padding: 14px;
+    }
+
+    th,
+    td {
+        padding: 11px 12px;
+    }
+}
+
+/* 18. AKSESIBILITAS */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}

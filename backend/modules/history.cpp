@@ -35,7 +35,7 @@ void History::save(const DiagnosisResult& result) {
     std::time_t now = std::time(nullptr);
     std::tm localTime{};
 
-    localtime_s(&localTime, &now);
+    localtime_r(&now, &localTime);
 
     std::ostringstream date;
     date << std::put_time(&localTime, "%Y-%m-%d %H:%M:%S");
@@ -74,4 +74,8 @@ void History::show() {
         std::cout << "\nSolusi   : " << row.at("Solusi");
         std::cout << "\n-----------------------------\n";
     }
+}
+
+std::vector<std::map<std::string, std::string>> History::getAll() {
+    return CSV::read("database/riwayat.csv");
 }

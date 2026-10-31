@@ -1,0 +1,244 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Computer Troubleshooter</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <header class="topbar">
+        <div class="brand">
+            <div class="brand-icon">CT</div>
+            <div>
+                <h1>Computer Troubleshooter</h1>
+                <p>Asisten diagnosis komputer</p>
+            </div>
+        </div>
+        <div id="userInfo" class="user-info hidden"></div>
+    </header>
+
+    <main class="container">
+
+        <!-- HALAMAN LOGIN -->
+        <section id="loginPage" class="page">
+            <div class="welcome">
+                <span class="eyebrow">DIAGNOSIS KOMPUTER</span>
+                <h2>Komputer kamu bermasalah?</h2>
+                <p>Temukan kemungkinan penyebab dan langkah penyelesaiannya.</p>
+            </div>
+
+            <div class="login-grid">
+                <div class="card">
+                    <div class="icon-box">G</div>
+                    <h3>Masuk sebagai Guest</h3>
+                    <p>Gunakan fitur diagnosis tanpa akun admin.</p>
+                    <form id="guestForm">
+                        <label for="guestUsername">Username</label>
+                        <input id="guestUsername" type="text"
+                               placeholder="Masukkan username" required>
+                        <button class="btn primary full" type="submit">
+                            Masuk sebagai Guest
+                        </button>
+                    </form>
+                </div>
+
+                <div class="card">
+                    <div class="icon-box green">A</div>
+                    <h3>Masuk sebagai Admin</h3>
+                    <p>Kelola pertanyaan, riwayat, dan statistik.</p>
+                    <form id="adminForm">
+                        <label for="adminUsername">Username</label>
+                        <input id="adminUsername" type="text"
+                               placeholder="Username admin" required>
+                        <label for="adminPassword">Password</label>
+                        <input id="adminPassword" type="password"
+                               placeholder="Password admin" required>
+                        <button class="btn success full" type="submit">
+                            Login Admin
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- DASHBOARD -->
+        <section id="dashboardPage" class="page hidden">
+            <div class="page-heading">
+                <div>
+                    <span class="eyebrow">DASHBOARD</span>
+                    <h2 id="dashboardTitle">Selamat datang!</h2>
+                    <p id="dashboardDescription"></p>
+                </div>
+            </div>
+
+            <div id="dashboardCards" class="feature-grid"></div>
+
+            <div class="card">
+                <h3>Sepuluh kategori masalah</h3>
+                <div id="categoryPreview" class="category-grid"></div>
+            </div>
+        </section>
+
+        <!-- PILIH MASALAH -->
+        <section id="categoryPage" class="page hidden">
+            <div class="page-heading">
+                <div>
+                    <span class="eyebrow">LANGKAH 1</span>
+                    <h2>Pilih masalah komputer</h2>
+                    <p>Pilih kategori yang paling sesuai dengan kendala kamu.</p>
+                </div>
+                <button class="btn outline" data-page="dashboardPage">
+                    Kembali
+                </button>
+            </div>
+            <div id="categoryGrid" class="category-grid"></div>
+        </section>
+
+        <!-- PROSES DIAGNOSIS -->
+        <section id="diagnosisPage" class="page hidden">
+            <div class="page-heading">
+                <div>
+                    <span class="eyebrow">LANGKAH 2</span>
+                    <h2 id="diagnosisTitle">Diagnosis</h2>
+                    <p>Jawab pertanyaan sesuai kondisi komputer kamu.</p>
+                </div>
+            </div>
+
+            <div class="card diagnosis-card">
+                <div class="progress-track">
+                    <div id="progressBar" class="progress-bar"></div>
+                </div>
+                <p id="questionNumber" class="hint"></p>
+                <h3 id="questionText">Pertanyaan akan muncul di sini.</h3>
+                <div class="answer-buttons">
+                    <button id="yesButton" class="btn success">Ya (Y)</button>
+                    <button id="noButton" class="btn danger">Tidak (T)</button>
+                </div>
+                <p class="hint">Pilih Ya atau Tidak untuk melanjutkan diagnosis.</p>
+            </div>
+        </section>
+
+        <!-- HASIL -->
+        <section id="resultPage" class="page hidden">
+            <div class="page-heading">
+                <div>
+                    <span class="eyebrow">HASIL DIAGNOSIS</span>
+                    <h2>Hasil pemeriksaan</h2>
+                    <p>Berikut kemungkinan penyebab dan langkah yang bisa dicoba.</p>
+                </div>
+            </div>
+            <div id="resultContent" class="card"></div>
+            <div class="button-row">
+                <button id="retryButton" class="btn primary">
+                    Diagnosis Ulang
+                </button>
+                <button class="btn outline" data-page="dashboardPage">
+                    Kembali ke Dashboard
+                </button>
+            </div>
+        </section>
+
+        <!-- RIWAYAT -->
+        <section id="historyPage" class="page hidden">
+            <div class="page-heading">
+                <div>
+                    <span class="eyebrow">DATA DIAGNOSIS</span>
+                    <h2>Riwayat diagnosis</h2>
+                    <p>Daftar pemeriksaan yang tersimpan di browser ini.</p>
+                </div>
+                <button class="btn outline" data-page="dashboardPage">
+                    Kembali
+                </button>
+            </div>
+            <div class="card table-card">
+                <div id="historyContent"></div>
+            </div>
+        </section>
+
+        <!-- STATISTIK -->
+        <section id="statisticsPage" class="page hidden">
+            <div class="page-heading">
+                <div>
+                    <span class="eyebrow">RINGKASAN DATA</span>
+                    <h2>Statistik diagnosis</h2>
+                    <p>Ringkasan pemeriksaan pada browser ini.</p>
+                </div>
+                <button class="btn outline" data-page="dashboardPage">
+                    Kembali
+                </button>
+            </div>
+            <div id="statisticsContent" class="stats-grid"></div>
+        </section>
+
+        <!-- KELOLA PERTANYAAN -->
+        <section id="managePage" class="page hidden">
+            <div class="page-heading">
+                <div>
+                    <span class="eyebrow">ADMINISTRATOR</span>
+                    <h2>Kelola pertanyaan</h2>
+                    <p>Contoh pengelolaan database pertanyaan diagnosis.</p>
+                </div>
+                <button class="btn outline" data-page="dashboardPage">
+                    Kembali
+                </button>
+            </div>
+
+            <div class="card">
+                <h3>Tambah pertanyaan demo</h3>
+                <form id="questionForm">
+                    <label for="newCategory">Kategori</label>
+                    <select id="newCategory" required></select>
+
+                    <label for="newQuestion">Pertanyaan</label>
+                    <input id="newQuestion" type="text"
+                           placeholder="Masukkan pertanyaan Y/T" required>
+
+                    <label for="newCause">Catatan penyebab jika jawab Ya</label>
+                    <input id="newCause" type="text"
+                           placeholder="Contoh: Banyak aplikasi aktif" required>
+
+                    <label for="newSolution">Solusi jika jawab Ya</label>
+                    <input id="newSolution" type="text"
+                           placeholder="Contoh: Tutup aplikasi yang tidak digunakan" required>
+
+                    <button class="btn primary" type="submit">
+                        Tambah Pertanyaan
+                    </button>
+                </form>
+                <p class="hint">
+                    Catatan: pertanyaan tambahan hanya tersimpan di browser ini dan belum mengubah database CSV backend.
+                </p>
+            </div>
+
+            <div class="card table-card">
+                <h3>Daftar pertanyaan tambahan</h3>
+                <div id="questionTable"></div>
+            </div>
+        </section>
+
+        <!-- AKSES DITOLAK -->
+        <section id="accessPage" class="page hidden">
+            <div class="card">
+                <h2>Akses tidak tersedia</h2>
+                <p>Halaman ini hanya dapat dibuka oleh Admin.</p>
+                <button class="btn primary" data-page="dashboardPage">
+                    Kembali ke Dashboard
+                </button>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Computer Troubleshooter &copy; 2026</p>
+        <p>Proyek pembelajaran C++ dan Web</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/login.js"></script>
+    <script src="js/diagnosis.js"></script>
+    <script src="js/admin.js"></script>
+</body>
+</html>

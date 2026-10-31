@@ -1,10 +1,28 @@
-# File hasil kompilasi
-*.exe
+
+# Python launcher
+launcher.py
+*.py
+__pycache__/
+*.pyc
+
+# Logs
+logs/
+*.log
+
+# Compiled files
+server
+server.exe
+*.o
 *.obj
-*.pdb
+*.exe
 
-# File sementara Visual Studio
-.vs/
+# Temporary files
+*.tmp
+*.bak
 
-# Folder build
-build/
+# VS Code
+.vscode/
+
+# Operating system
+.DS_Store
+Thumbs.db
