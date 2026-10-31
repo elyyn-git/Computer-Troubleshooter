@@ -1,5 +1,5 @@
 
-const API_URL = "https://varied-seat-fits-joseph.trycloudflare.com/api";
+const API_URL = "https://employ-available-clusters-state.trycloudflare.com/api";
 
 // Menyimpan kategori dan proses diagnosis yang sedang berjalan
 let diagnosisCategories = [];
